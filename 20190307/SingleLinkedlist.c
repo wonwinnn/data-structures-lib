@@ -52,6 +52,38 @@ void PrintList(Lnode *head) //Print list form head to end
 	}
 }
 
+Lnode *Find(Lnode *head, eletype e)
+{
+	Lnode *current = head;
+	while (current != NULL && current->data != e)
+		current = current->next;
+	return current;
+}
+
+Lnode *FindPrev(Lnode *head, eletype e)
+{
+	Lnode *current = head;
+	while (current->next != NULL && current->next->data != e)
+		current = current->next;
+	return current;
+}
+
+void swap(Lnode *head, eletype e1, eletype e2)
+{
+	Lnode *p1, *p2, *c1, *c2, *tmp;
+	p1 = FindPrev(head, e1);
+	p2 = FindPrev(head, e2);
+	c1 = Find(head,e1);
+	c2 = Find(head, e2);
+	if (c1 == c2)
+		return;
+	p1->next = c2;
+	tmp = c1->next;
+	c1->next = c2->next;
+	p2->next = c1;
+	c2->next = tmp;
+}
+
 void BubbleSort(Lnode *head)
 {
 	Lnode *current, *prev, *tmp;
