@@ -16,5 +16,9 @@ void BubbleSort(Lnode *head);
 void InsertSort(Lnode *head);
 void SwapData(Lnode *p, Lnode *q);
 void QuickSort(Lnode *head, Lnode *left, Lnode *right);
+Lnode *MergeList(Lnode *head1, Lnode *head2);
+Lnode *MergeListCore(Lnode *head1, Lnode *head2);
+void MergeSort(Lnode *head);
+Lnode *MergeSortCore(Lnode *head);
 
 #endif
