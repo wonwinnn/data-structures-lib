@@ -9,7 +9,7 @@ void InsertSort(Lnode *head)
 		prev = head;
 		current = tail->next; //current is the begin of unsorted part
 		while (prev != tail && prev->next->data < current->data) 
-			prev = prev->next; //Find minimum in sorted elements
+			prev = prev->next; //Find first element which is bigger than current in sorted part
 		if (prev != tail) { //There exists an element in sorted part which is bigger than current
 			tail->next = current->next;
 			current->next = prev->next;
