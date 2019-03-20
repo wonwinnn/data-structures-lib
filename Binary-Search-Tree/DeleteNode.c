@@ -14,7 +14,7 @@ Tnode *DeleteNode(Tnode *root, eletype data)
 		if (root->lchild && root->rchild) { //has two children
 			tmp = FindMin(root->rchild); //Replace with smallest in right subtree
 			root->data = tmp->data;
-			root->rchild = DeleteNode(root->rchild, root->data);
+			root->rchild = DeleteNode(root->rchild, tmp->data); //delete smallest in right subtree
 		}
 		else { //has one child or no child
 			tmp = root;
