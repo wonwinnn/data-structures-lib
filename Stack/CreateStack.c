@@ -10,7 +10,8 @@ Stack *CreateStack()
 		printf("Out of space\n");
 		return NULL;
 	}
-	while (S->next != NULL)
-		Pop(S);
+	//while (S->next != NULL)
+	//	Pop(S);
+	S->next = NULL;
 	return S;
 }
