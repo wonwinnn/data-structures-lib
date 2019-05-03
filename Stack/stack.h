@@ -10,6 +10,7 @@ typedef struct node
 }Stack;
 
 Stack *CreateStack();
+void DeleteStack(Stack *S)
 void Pop(Stack *S);
 void Push(Stack *S, eletype data);
 
