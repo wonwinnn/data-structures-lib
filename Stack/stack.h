@@ -5,8 +5,8 @@ typedef int eletype;
 
 typedef struct node
 {
-		eletype data;
-		struct node *next;
+	eletype data;
+	struct node *next;
 }Stack;
 
 Stack *CreateStack();
