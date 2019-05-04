@@ -18,5 +18,6 @@ int Succ(Queue *Q, int value);
 void Enqueue(Queue *Q, eletype data);
 int isEmpty(Queue *Q);
 void Dequeue(Queue *Q);
+void DeleteQueue(Queue *Q);
 
 #endif
